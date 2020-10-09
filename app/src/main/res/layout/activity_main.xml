@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textViewLastNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/lastName"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewAgeId"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNameId" />
+
+        <TextView
+            android:id="@+id/textViewNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textViewLastNameId"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextNameId"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:ems="10"
+            android:hint="@string/name"
+            android:inputType="textPersonName"
+            android:autofillHints="name"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewNameId"
+            app:layout_constraintStart_toEndOf="@+id/textViewNameId"
+            app:layout_constraintTop_toTopOf="@+id/textViewNameId" />
+
+        <EditText
+            android:id="@+id/editTextLastNameId"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/lastName"
+            android:inputType="textPersonName"
+            android:autofillHints="lastname"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewLastNameId"
+            app:layout_constraintStart_toStartOf="@+id/editTextNameId"
+            app:layout_constraintTop_toTopOf="@+id/textViewLastNameId"
+            app:layout_constraintVertical_bias="0.48" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupSexId"
+            android:layout_width="314dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLastNameId">
+
+            <RadioButton
+                android:id="@+id/radioButtonMaleId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/radioMale" />
+
+            <RadioButton
+                android:id="@+id/radioButtonFemaleId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/radioFemale" />
+        </RadioGroup>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewHobbiesId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:padding="5dp"
+            app:cardBackgroundColor="@android:color/darker_gray"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupSexId">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewHobbiesId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/hobbies"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxFootballId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chkFootball" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxTennisId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chkTennis" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSwimmingId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/chkSwimming" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewAgeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/age"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/seekBarAgeId"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewHobbiesId" />
+
+        <TextView
+            android:id="@+id/textViewAgeActualId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/ageActual"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/seekBarAgeId"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarAgeId" />
+
+        <SeekBar
+            android:id="@+id/seekBarAgeId"
+            android:layout_width="300dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="15dp"
+            android:max="82"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAgeId" />
+
+        <Button
+            android:id="@+id/buttonClearId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:onClick="clear"
+            android:text="@string/btClear"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSendId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarAgeId" />
+
+        <Button
+            android:id="@+id/buttonSendId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btSend"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonClearId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonClearId"
+            app:layout_constraintTop_toTopOf="@+id/buttonClearId" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

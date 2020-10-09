@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="name">Nombre</string>
+    <string name="lastName">Apellidos</string>
+    <string name="age">Edad</string>
+    <string name="ageActual">Edad: %d</string>
+    <string name="gender">Género</string>
+    <string name="radioMale">Hombre</string>
+    <string name="radioFemale">Mujer</string>
+    <string name="hobbies">Aficiones</string>
+    <string name="chkFootball">Fútbol</string>
+    <string name="chkTennis">Tenis</string>
+    <string name="chkSwimming">Natación</string>
+    <string name="btSend">Enviar</string>
+    <string name="btClear">Limpiar</string>
+    <string name="msgClear">Has pulsado el botón "Limpiar"</string>
+    <string name="msgSend">Has pulsado el botón "Enviar"</string>
+    <string name="titleDataActivity">Datos</string>
+    <string name="buttonBack">Volver</string>
+</resources>
